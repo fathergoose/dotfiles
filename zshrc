@@ -1,7 +1,9 @@
 # Source this file from system zshrc or symlink
 
 # Gather passwords and keys
-source ./secrets
+if [[ -s ./secrets ]] ; then
+    source ./secrets
+fi
 
 # Aliases
 
