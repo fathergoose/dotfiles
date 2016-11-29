@@ -15,6 +15,7 @@
     let g:neomake_javascript_enabled_makers = ['eslint']
     let g:neomake_autolint_cachedir = '/home/al/.vim/autolint'
     let g:neomake_autolint_sign_column_always = 1
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
